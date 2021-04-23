@@ -3,17 +3,23 @@ const morgan = require("morgan");
 
 const app = express();
 
+// Using express middlewares so that json body could be parsed.
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+// Using morgan for logging and debugging purposes
 app.use(morgan("dev"));
 
+// Initialising the express routes
 require("./routes/index")(app);
 
 const PORT = process.env.PORT;
 
+// Creating a cluster so that multiple workers can work parallely which reduces response time
 const cluster = require("cluster");
 const http = require("http");
 const { dbSuccessLog, dbErrorLog, messageLog } = require("./common/messages");
+
+// To determine the number of processes to run
 const numCPUs = require("os").cpus().length;
 
 if (cluster.isMaster) {
