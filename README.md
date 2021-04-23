@@ -75,6 +75,10 @@ This endpoint looks for the filename `dummy_data.json` inside the directory `dom
 
 ## Env variables
 
+Add a file called `.env` in the root directory with the following content.
+
+`Note:` the content inside the angluar brackets `<>` have to be replaced with custom values.
+
     PORT=<custom PORT>
     API_VERSION=<custom versioning>
     NODE_ENV=<production or development>
