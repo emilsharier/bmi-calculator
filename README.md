@@ -73,6 +73,12 @@ This endpoint looks for the filename `dummy_data.json` inside the directory `dom
         }
     }
 
+## Env variables
+
+    PORT=<custom PORT>
+    API_VERSION=<custom versioning>
+    NODE_ENV=<production or development>
+
 ## Tests
 
 There are two unit tests which are written using `Mocha`. Mocha is a testing framework for NodeJS which allows developers to easily test their code.
