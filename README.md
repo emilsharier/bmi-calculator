@@ -7,6 +7,19 @@ This is a sample application to calculate the BMI and determine the BMI category
 The data which the application takes in is a json file in the directory `/domain/services`. For the time being, I have put dummy data inside the directory.
 The reason for considering the data input as a file rather than a JSON object that can be passed into the request body is because the problem statement states that the input range may go upto 1 Lakh.
 
+## Sample input data
+
+`dummy_data.json`
+
+    [
+        { "Gender": "Male", "HeightCm": 171, "WeightKg": 96 },
+        { "Gender": "Male", "HeightCm": 161, "WeightKg": 85 },
+        { "Gender": "Male", "HeightCm": 180, "WeightKg": 77 },
+        { "Gender": "Female", "HeightCm": 166, "WeightKg": 62 },
+        { "Gender": "Female", "HeightCm": 150, "WeightKg": 70 },
+        { "Gender": "Female", "HeightCm": 167, "WeightKg": 50 }
+    ]
+
 ## Endpoints
 
     /calculate
